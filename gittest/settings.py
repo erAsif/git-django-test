@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
+    'gitt',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +123,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'testdjango',          # 👈 your DB name
+        'USER': 'postgres',              # 👈 your PostgreSQL username
+        'PASSWORD': 'admin',     # 👈 your PostgreSQL password
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
