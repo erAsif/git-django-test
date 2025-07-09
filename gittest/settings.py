@@ -134,18 +134,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-<<<<<<< HEAD
-        'NAME': 'testdjango',          # 👈 your DB name
-=======
         'NAME': 'git_test',          # 👈 your DB name
->>>>>>> 3a746b4e626961be3c490f0cb2c3c4cf6362bc23
         'USER': 'postgres',              # 👈 your PostgreSQL username
         'PASSWORD': 'admin',     # 👈 your PostgreSQL password
         'HOST': 'localhost',
         'PORT': '5432',
-    }
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 3a746b4e626961be3c490f0cb2c3c4cf6362bc23
