@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
+
+
+import os
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -120,3 +126,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'git_test',          # 👈 your DB name
+        'USER': 'postgres',              # 👈 your PostgreSQL username
+        'PASSWORD': 'admin',     # 👈 your PostgreSQL password
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
